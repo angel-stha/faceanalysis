@@ -1,0 +1,78 @@
+body {
+	width: 100%;
+	height:100%;
+	font-family: 'Open Sans', sans-serif;
+	background-color:#072733;
+	color: #fff;
+
+}
+.analyze {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin: -150px 0 0 -150px;
+	width:400px;
+	height:400px;
+}
+.analyze h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
+
+h1{
+color: white;
+text-align:center}
+
+.output{
+ float:left;
+ width:200px;
+ height:300px;
+ left:0;
+}
+.opttext{
+color:#E6E1B5 ;
+
+}
+.headopttext{
+ color:#D7D3B8 ;
+ font-size:15px
+}
+.insert_image {
+  width: 500px;
+  height: 500px;
+  border: 2px solid;
+  color: white;
+  resize: both;
+  background-repeat: no-repeat;
+  position:absolute;
+  right:0;
+}
+
+
+.input{
+    width: 50%%;
+	margin-bottom: 10px;
+	text-align:centre;
+	background: rgba(0,0,0,0.3);
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: grey;
+	padding-left: 30px;
+	right:0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	}
+h1
+{width: 1000px 1000px}
+.headinsert{
+color:#D7D3B8 ;
+text-align:center;
+
+}
+.foot{
+padding-left:600px;
+bottom:0;
+}
+
+

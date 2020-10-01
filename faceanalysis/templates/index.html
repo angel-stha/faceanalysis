@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <title>Facial Analysis</title>
+<link rel="stylesheet"  type='text/css' href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+
+
+
+h1 {width: 1000px 1000px}
+
+footer{
+padding_left:600px
+float:right
+}
+
+</style>
+</head>
+
+<body>
+<div>
+<h1 >Genese Cloud Academy</h1>
+<div class="insert_image">
+     <p class="headinsert"> Insert new participants and analyze their image</p>
+     <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('analyze')}}" method="post" enctype="multipart/form-data" id="image_input">
+            <input class="input" type="text" name="username" placeholder="Enter name of  participant"/>
+            <br/><br/>
+    	    <input class="input" type="file" name="file1" placeholder="Please upload the photo" required="required" accept="image/*" onchange="loadFile(event)" />
+            <br/>
+            <br/>
+
+             <button type="submit" class="input">Analyze</button>
+
+        </form>
+
+
+</div>
+<div style="float:left;width:300px;height:300px;left:0">
+    <img src="../static/file/{{address}}" style="width:200px;height:200px float:left;">
+    <p >{{analyzed_text}}</p>
+     <br/>
+    <p class="opttext">{{genders}}</p>
+     <p class="opttext">{{age}}</p>
+    <p class="opttext">{{emotion}}</p>
+    <p class="opttext">{{eye}}</p>
+    <p class="opttext">{{sun}}</p>
+    <p class="opttext">{{musg}}</p>
+</div>
+<div style="padding-top:600px">
+        <form action="{{ url_for('analyzed')}}" method="post" enctype="multipart/form-data" id="output">
+            <button type="submit" class="input">Analyzed Results</button>
+        </form>
+   <table border="2px">
+  <tr>
+    <th>USERS</th> &nbsp;&nbsp;
+    <th>GENDER</th>
+    <th>AGERANGELOW</th>&nbsp;
+    <th>AGEHIGHRANGE</th> &nbsp;
+      <th>AVATAR</th>
+  </tr>
+  <tr>
+      <td>
+      {% for user in user %}
+          {{user}} <br/><br/><br/><br/>
+      {% endfor %}
+      </td>
+       <td>
+      {% for gender in gender %}
+          {{gender}} <br/><br/><br/><br/>
+      {% endfor %}
+      </td>
+      <td>
+      {% for low in agelower %}
+          {{low}} <br/><br/><br/><br/>
+      {% endfor %}
+      </td>
+      <td>
+      {% for high in agehigher %}
+          {{high}} <br/><br/><br/><br/>
+      {% endfor %}
+      </td>
+       <td>
+      {% for image in imagename %}
+           <img src="../static/file/{{image}}" style="width:50px;height:50px"><br><br>
+      {% endfor %}
+      </td>
+  </tr>
+</table>
+</div>
+</div>
+<div style="padding-left:500px; bottom:0;">
+  <p >Copyright@2020<br>
+      Author: Angel Shrestha<br>
+      <a href="https://www.linkedin.com/in/shrestha-angel/">LinkedIn</a> </p>
+    </div>
+</body>
+
+</html>
