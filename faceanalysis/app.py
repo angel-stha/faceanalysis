@@ -16,17 +16,19 @@ app.config['MYSQL_DB'] = 'faceanalyze'
 mysql = MySQL(app)
 
 # awsconfiguration
-app.secret_key = 'EaapG2c4dNnKy/QlHgQGCiXPcrXmxT4kbNOmWJrL'
+app.secret_key = 'your_secret_key'
 bucket_name = "genesefaceanalysis"
 
 # extracting s3 api
-s3 = boto3.client("s3", aws_access_key_id='ASIATP56KWJNFFH7GAIO',
-aws_secret_access_key='O8pL3IXz4ATAii2RzucCUb+BGl9DquzxFT9tK49K',
-aws_session_token='FwoGZXIvYXdzEF8aDLU8EJBgFD8vTjh5fSLZAZ78DxIKnn632QDUCoJqdB2aSJKK5n29yg7EkLz87ZxgttY/h4/XaBKxzUeA7izHEbZSRyPiDNgjmd/dHAyLpSJK0bJe8UIRmj8NAaPPT6SadbQcp2bvzZGCZP+DlllWyJz4S7ZooohzHi86uvl/i7glZ8K6/t5Uy+rpha0EzBz/riClQ4u81nO+89cxxfufq+kilappKF4R4BAYEWTEpooULUwWG4cCNo5xa6u5RyS+Ze2j9/TAcvRLyXAI44Tcgk2KFsL2OraA8pL4SUHGMb4DXcCMHoM7g1go2LDX+wUyLTNtK9qUPBRh8PR+C9Pwky49Hm8yH7xf4dHmmFYT0nKuvV8CWXw/uYPkfbVXCw==')
+s3 = boto3.client("s3", aws_access_key_id='acess_key_id',
+aws_secret_access_key='access_key',
+aws_session_token='session_token')
 bucket_resource = s3
 
 # extracting api for rekognition
-client = boto3.client("rekognition", aws_access_key_id='ASIATP56KWJNFFH7GAIO',aws_secret_access_key='O8pL3IXz4ATAii2RzucCUb+BGl9DquzxFT9tK49K',aws_session_token='FwoGZXIvYXdzEF8aDLU8EJBgFD8vTjh5fSLZAZ78DxIKnn632QDUCoJqdB2aSJKK5n29yg7EkLz87ZxgttY/h4/XaBKxzUeA7izHEbZSRyPiDNgjmd/dHAyLpSJK0bJe8UIRmj8NAaPPT6SadbQcp2bvzZGCZP+DlllWyJz4S7ZooohzHi86uvl/i7glZ8K6/t5Uy+rpha0EzBz/riClQ4u81nO+89cxxfufq+kilappKF4R4BAYEWTEpooULUwWG4cCNo5xa6u5RyS+Ze2j9/TAcvRLyXAI44Tcgk2KFsL2OraA8pL4SUHGMb4DXcCMHoM7g1go2LDX+wUyLTNtK9qUPBRh8PR+C9Pwky49Hm8yH7xf4dHmmFYT0nKuvV8CWXw/uYPkfbVXCw==')
+client = boto3.client("rekognition", aws_access_key_id='acess_key_id',
+aws_secret_access_key='access_key',
+aws_session_token='session_token')
 
 
 
